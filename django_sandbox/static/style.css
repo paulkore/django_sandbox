@@ -1,0 +1,19 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+.main-wrapper {
+    width: 500px;
+    border-radius: 5px;
+    margin: 25px;
+    padding: 20px;
+    background-color: lightblue;
+}
+
+.message {
+    font-weight: bold;
+    font-size: 16pt;
+    color: green;
+}

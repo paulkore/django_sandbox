@@ -10,8 +10,6 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-# BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
 # [Heroku]:
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -62,14 +60,10 @@ WSGI_APPLICATION = 'django_sandbox.wsgi.application'
 import dj_database_url
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
-
-    # [Heroku] Parse database configuration from $DATABASE_URL
-    # 'default': dj_database_url.config()
+    # [Heroku]
+    # Parse database configuration from $DATABASE_URL
     'default': dj_database_url.config(default='postgres://django_sandbox:django_sandbox@localhost:5432/django_sandbox')
+    # 'default': dj_database_url.config()
 }
 
 # [Heroku] Enable Connection Pooling
@@ -90,12 +84,8 @@ USE_L10N = True
 USE_TZ = True
 
 
-
-
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-# STATIC_URL = '/static/'
 
 # [Heroku]:
 STATIC_ROOT = 'staticfiles'
@@ -108,7 +98,6 @@ STATICFILES_DIRS = (
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
-
 
 
 

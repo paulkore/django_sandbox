@@ -8,7 +8,8 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
 
-    url(r'^$', 'django_sandbox.views.home', name='home'),
+    url(r'^$', 'django_sandbox.views.sandbox', name='root'),
+    url(r'^sandbox$', 'django_sandbox.views.sandbox', name='sandbox'),
 
 
 )
