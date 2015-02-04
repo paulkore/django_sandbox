@@ -3,6 +3,6 @@ from django.contrib import admin
 
 urlpatterns = patterns(
     '',
-    url(r'^$', 'django_sandbox.views.sandbox', name='root'),
     url(r'^sandbox$', 'django_sandbox.views.sandbox', name='sandbox'),
+    url(r'^.*$', 'django_sandbox.views.sandbox_redirect'),
 )
