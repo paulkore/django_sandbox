@@ -68,7 +68,8 @@ DATABASES = {
     # }
 
     # [Heroku] Parse database configuration from $DATABASE_URL
-    'default': dj_database_url.config()
+    # 'default': dj_database_url.config()
+    'default': dj_database_url.config(default='postgres://django_sandbox:django_sandbox@localhost:5432/django_sandbox')
 }
 
 # [Heroku] Enable Connection Pooling
